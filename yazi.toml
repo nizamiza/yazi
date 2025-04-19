@@ -6,3 +6,8 @@ edit = [
 	{ run = 'hx "$@"', block = true, for = "unix" },
 	{ run = "hx %*",   block = true, for = "windows" },
 ]
+
+[open]
+prepend_rules = [
+	{ name = "*.svg", use = "edit" }
+]
