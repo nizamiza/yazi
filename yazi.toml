@@ -3,11 +3,13 @@ ratio = [3, 5, 7]
 
 [opener]
 edit = [
-	{ run = '$EIDTOR "$@"', block = true, for = "unix" },
-	{ run = "%EDITOR% %*",   block = true, for = "windows" },
+	{ run = '$EDITOR "$@"', block = true, for = "unix" },
+    { run = '%EDITOR% %*', block = false, for = "windows" }
 ]
 
 [open]
 prepend_rules = [
+    { mime = "text/*", use = "edit" },
 	{ name = "*.svg", use = "edit" }
 ]
+
