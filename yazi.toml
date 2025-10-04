@@ -1,10 +1,10 @@
-[manager]
+[mgr]
 ratio = [3, 5, 7]
 
 [opener]
 edit = [
-	{ run = 'hx "$@"', block = true, for = "unix" },
-	{ run = "hx %*",   block = true, for = "windows" },
+	{ run = '$EIDTOR "$@"', block = true, for = "unix" },
+	{ run = "%EDITOR% %*",   block = true, for = "windows" },
 ]
 
 [open]
